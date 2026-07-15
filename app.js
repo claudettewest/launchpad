@@ -6,7 +6,7 @@ const gamesApp = document.querySelector("#games-app");
 const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
 mineralApp.href = localHosts.has(window.location.hostname)
   ? "http://localhost:3011"
-  : "http://100.127.36.6:3011";
+  : "http://100.127.36.5:3011";
 gamesApp.href = localHosts.has(window.location.hostname)
   ? "http://localhost:3311"
   : "http://100.127.36.5:3311";
