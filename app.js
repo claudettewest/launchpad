@@ -1,5 +1,11 @@
 const stars = document.querySelector("#stars");
 const time = document.querySelector("#local-time");
+const mineralApp = document.querySelector("#mineral-app");
+
+const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
+mineralApp.href = localHosts.has(window.location.hostname)
+  ? "http://localhost:3011"
+  : "http://100.127.36.6:3011";
 
 const fragment = document.createDocumentFragment();
 for (let i = 0; i < 44; i += 1) {
