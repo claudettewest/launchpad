@@ -2,8 +2,9 @@ const http = require("node:http");
 const fs = require("node:fs");
 const path = require("node:path");
 
-const host = "127.0.0.1";
+const host = process.env.HOST || "127.0.0.1";
 const port = Number(process.env.PORT || 3411);
+const publicUrl = process.env.PUBLIC_URL || `http://${host}:${port}`;
 const root = __dirname;
 
 const contentTypes = {
@@ -60,5 +61,5 @@ server.on("error", (error) => {
 });
 
 server.listen(port, host, () => {
-  console.log(`Launch pad running at http://localhost:${port}`);
+  console.log(`Launch pad running at ${publicUrl}`);
 });
