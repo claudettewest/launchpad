@@ -3,81 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#070915" />
-    <meta
-      name="description"
-      content="A personal launch pad for the Mineral Collection and My Games apps."
-    />
-    <title>Launch Pad</title>
+    <meta name="theme-color" content="#70c5f0" />
+    <meta name="description" content="A colorful personal launch pad for three favorite apps." />
+    <title>Springfield Launch Pad</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Luckiest+Guy&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="scene" aria-hidden="true">
-      <div class="orb orb-violet"></div>
-      <div class="orb orb-blue"></div>
-      <div class="orb orb-mint"></div>
-      <div class="grid"></div>
-      <div class="noise"></div>
-      <div class="stars" id="stars"></div>
+      <div class="sun"></div>
+      <div class="cloud cloud-one"><i></i><i></i><i></i></div>
+      <div class="cloud cloud-two"><i></i><i></i><i></i></div>
+      <div class="cloud cloud-three"><i></i><i></i><i></i></div>
+      <div class="springfield-hills"></div>
+      <div class="sprinkles" id="sprinkles"></div>
     </div>
 
     <main class="launch-pad">
       <header class="hero">
-        <div class="eyebrow"><span></span> Personal workspace</div>
-        <h1>Where would you<br /><em>like to go?</em></h1>
-        <p>Everything you’re building, one launch away.</p>
+        <div class="eyebrow"><span></span> Welcome to your</div>
+        <h1>Springfield<br /><em>Launch Pad!</em></h1>
+        <p>Pick an adventure. Everything is just one click away.</p>
       </header>
 
       <nav class="app-grid" aria-label="Your applications">
         <a class="app-card minerals" id="mineral-app" href="http://localhost:3011">
           <span class="card-glow" aria-hidden="true"></span>
           <span class="icon-wrap" aria-hidden="true">
-            <svg viewBox="0 0 64 64" role="img">
-              <path d="M12 24 27 9h12l13 17-8 27H21L12 24Z" />
-              <path d="m12 24 19 8 21-6M27 9l4 23 8-23M21 53l10-21 13 21" />
-            </svg>
+            <svg viewBox="0 0 64 64" role="img"><path d="M12 24 27 9h12l13 17-8 27H21L12 24Z" /><path d="m12 24 19 8 21-6M27 9l4 23 8-23M21 53l10-21 13 21" /></svg>
           </span>
-          <span class="card-copy">
-            <span class="card-label">Collection 01</span>
-            <strong>Mineral<br />Collection</strong>
-            <span class="card-description">Explore specimens and discoveries</span>
-          </span>
-          <span class="launch-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" /></svg>
-          </span>
+          <span class="card-copy"><span class="card-label">Adventure 01</span><strong>Mineral<br />Collection</strong><span class="card-description">Explore specimens and discoveries</span></span>
+          <span class="launch-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" /></svg></span>
         </a>
 
         <a class="app-card games" id="games-app" href="http://localhost:3311">
           <span class="card-glow" aria-hidden="true"></span>
           <span class="icon-wrap" aria-hidden="true">
-            <svg viewBox="0 0 64 64" role="img">
-              <path d="M22 23h20c8 0 14 7 14 15v3c0 7-7 11-12 6l-5-5H25l-5 5C15 52 8 48 8 41v-3c0-8 6-15 14-15Z" />
-              <path d="M20 31v10m-5-5h10m18-3h.1M48 39h.1" />
-            </svg>
+            <svg viewBox="0 0 64 64" role="img"><path d="M22 23h20c8 0 14 7 14 15v3c0 7-7 11-12 6l-5-5H25l-5 5C15 52 8 48 8 41v-3c0-8 6-15 14-15Z" /><path d="M20 31v10m-5-5h10m18-3h.1M48 39h.1" /></svg>
           </span>
-          <span class="card-copy">
-            <span class="card-label">Arcade 02</span>
-            <strong>My<br />Games</strong>
-            <span class="card-description">Jump back into play</span>
+          <span class="card-copy"><span class="card-label">Adventure 02</span><strong>My<br />Games</strong><span class="card-description">Jump back into play</span></span>
+          <span class="launch-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" /></svg></span>
+        </a>
+
+        <a class="app-card books" id="book-app" href="http://localhost:3511">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img"><path d="M10 15c8-3 15-1 22 5v34c-7-6-14-8-22-5V15Z" /><path d="M54 15c-8-3-15-1-22 5v34c7-6 14-8 22-5V15Z" /><path d="M17 25c4 0 7 1 10 3M17 33c4 0 7 1 10 3M47 25c-4 0-7 1-10 3M47 33c-4 0-7 1-10 3" /></svg>
           </span>
-          <span class="launch-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" /></svg>
-          </span>
+          <span class="card-copy"><span class="card-label">Adventure 03</span><strong>Book<br />Reader</strong><span class="card-description">Settle in with a good story</span></span>
+          <span class="launch-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" /></svg></span>
         </a>
       </nav>
 
-      <footer>
-        <span><i></i> All systems ready</span>
-        <span id="local-time" aria-label="Local time"></span>
-      </footer>
+      <footer><span><i></i> Everything's coming up Milhouse</span><span id="local-time" aria-label="Local time"></span></footer>
     </main>
-
     <script src="app.js"></script>
   </body>
 </html>

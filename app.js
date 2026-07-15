@@ -1,7 +1,8 @@
-const stars = document.querySelector("#stars");
+const sprinkles = document.querySelector("#sprinkles");
 const time = document.querySelector("#local-time");
 const mineralApp = document.querySelector("#mineral-app");
 const gamesApp = document.querySelector("#games-app");
+const bookApp = document.querySelector("#book-app");
 
 const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
 mineralApp.href = localHosts.has(window.location.hostname)
@@ -10,18 +11,21 @@ mineralApp.href = localHosts.has(window.location.hostname)
 gamesApp.href = localHosts.has(window.location.hostname)
   ? "http://localhost:3311"
   : "http://100.127.36.5:3311";
+bookApp.href = localHosts.has(window.location.hostname)
+  ? "http://localhost:3511"
+  : "http://100.127.36.5:3511";
 
 const fragment = document.createDocumentFragment();
-for (let i = 0; i < 44; i += 1) {
-  const star = document.createElement("i");
-  star.className = "star";
-  star.style.left = `${Math.random() * 100}%`;
-  star.style.top = `${Math.random() * 100}%`;
-  star.style.setProperty("--speed", `${3 + Math.random() * 5}s`);
-  star.style.setProperty("--delay", `${Math.random() * -8}s`);
-  fragment.appendChild(star);
+for (let i = 0; i < 28; i += 1) {
+  const sprinkle = document.createElement("i");
+  sprinkle.className = "sprinkle";
+  sprinkle.style.left = `${Math.random() * 100}%`;
+  sprinkle.style.top = `${Math.random() * 100}%`;
+  sprinkle.style.setProperty("--spin", `${Math.random() * 180}deg`);
+  sprinkle.style.setProperty("--delay", `${Math.random() * -8}s`);
+  fragment.appendChild(sprinkle);
 }
-stars.appendChild(fragment);
+sprinkles.appendChild(fragment);
 
 function updateClock() {
   time.textContent = new Intl.DateTimeFormat(undefined, {
